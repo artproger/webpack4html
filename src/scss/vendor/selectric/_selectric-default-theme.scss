@@ -1,0 +1,123 @@
+/*======================================
+  Selectric default theme
+======================================*/
+
+
+.selectric {
+  border: 2px solid #cccccc;
+  border-radius: 0px;
+  background: #fff;
+
+  .label {
+    margin: 0 50px 0 20px;
+    line-height: 50px;
+    height: 50px;
+    color: #7e6041;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.38px;
+  }
+
+  .button {
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    color: #BBB;
+    text-align: center;
+    font: 0/0 a;
+    *font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-top-color: #BBB;
+      border-bottom: none;
+    }
+  }
+}
+
+
+
+.selectric-focus .selectric {
+  border-color: #aaaaaa;
+}
+
+.selectric-hover .selectric {
+  border-color: #c4c4c4;
+}
+
+.selectric-hover .selectric .button {
+  color: #a2a2a2;
+}
+
+.selectric-hover .selectric .button:after {
+  border-top-color: #a2a2a2;
+}
+
+.selectric-open .selectric {
+  border-color: #c4c4c4;
+}
+
+
+/* Items box */
+.selectric-items {
+  background: #fff;
+  border: 2px solid #cccccc;
+  box-shadow: 0 0 10px -6px;
+
+  ul,
+  li {
+    line-height: 20px;
+    min-height: 20px;
+
+    color: #7e6041;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.38px;
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  li.selected {
+    background: #E0E0E0;
+    color: #444;
+  }
+
+  li.highlighted {
+    background: #D0D0D0;
+    color: #444;
+  }
+
+  li:hover {
+    background: #D5D5D5;
+    color: #444;
+  }
+
+  .disabled {
+    color: #666 !important;
+  }
+
+  .selectric-group .selectric-group-label {
+    font-weight: bold;
+    padding-left: 10px;
+    color: #444;
+  }
+
+  .selectric-group li {
+    padding-left: 25px;
+  }
+
+}

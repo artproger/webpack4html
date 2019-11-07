@@ -1,0 +1,122 @@
+  /* ---------- Custom checkbox & custom radio ---------- */
+
+  /* пример разметки html:
+  <label class="custom-checkbox">
+      <input type="checkbox" name=".." class="custom-checkbox__input" value="True" checked="checked">
+      <span class="custom-checkbox__btn"></span>
+      <span class="custom-checkbox__label">Lorem ipsum dolor</span>
+  </label>
+  */
+
+  .custom-checkbox {
+    cursor: pointer;
+    @include no-select();
+
+    &__input {
+      display: none;
+    }
+
+    &__btn,
+    &__label {
+      display: inline-block;
+      vertical-align: middle;
+      @include no-select();
+    }
+
+    /*Не выбранный checkbox*/
+    &__btn {
+      position: relative;
+      margin-right: 10px;
+      width: 26px;
+      height: 26px;
+      border-radius: 2px;
+      background-color: #deedf5;
+    }
+
+    &__label {
+      font-size: 15px;
+      position: relative;
+      top: -3px;
+    }
+
+    /* Выбранный checkbox */
+    &__input:checked + &__btn::before {
+      content: "b";
+      font-family: 'icons';
+      display: block;
+      position: absolute;
+      font-size: 15px;
+      top: 6px;
+      right: 5px;
+      width: 15px;
+      height: 11px;
+      color: #6472e0;
+      line-height: 1;
+    }
+
+  }
+
+
+
+  /* ------------- Custom radio-button ---------- */
+
+  /* пример разметки html:
+  <label class="custom-radio">
+      <input class="custom-radio__input" type="radio" name="radio-test">
+      <span class="custom-radio__btn"></span>
+      <span class="custom-radio__label">Lorem ipsum dolor</span>
+  </label>
+  */
+
+
+.tform {
+  .custom-radio {
+     @include no-select();
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+
+      &__input {
+        display: none;
+      }
+
+      &__btn {
+        width: 29px;
+        height: 29px;
+        border: 2px solid #d4ba97;
+        background-color: #fff;
+        position: relative;
+        margin-right: 10px;
+      }
+
+      &__btn,
+      &__label {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      &__label {
+        color: #684d30;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 0.44px;
+      }
+
+      .custom-radio__input:checked + .custom-radio__btn::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+        background-color: #9a7b5a;
+      }
+      .custom-radio__btn,
+      .custom-radio__input:checked + .custom-radio__btn::before {
+        border-radius: 50%;
+      }
+
+  }
+
+}

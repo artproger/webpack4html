@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// FORMS
+// -----------------------------------------------------------------------------
+
+
+	input {
+		width: 100%;
+		height: 33px;
+
+		color: #000;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20.04px;
+		letter-spacing: 0.4px;
+		border: 1px solid #d3d3d3;
+		padding: 0 20px;
+
+		@include placeholder(){
+			color: #757575;
+			font-family: 'PT Sans', sans-serif;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 20.04px;
+			letter-spacing: 0.4px;
+		}
+	}
+

@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// LAYOUT of the site/application.
+// -----------------------------------------------------------------------------
+.site-header {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+}
+
+
+.site-main {
+    padding: 20px 0;
+
+    @include media ('<=sm') {
+        border: 2px red solid;
+    }
+}
+
+.content-wrap {
+    margin-top: 20px;
+}
+
+.site-footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+}
